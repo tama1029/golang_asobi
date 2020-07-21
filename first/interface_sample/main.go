@@ -6,22 +6,30 @@ type Call interface {
 	reply() string
 }
 
-type Dog struct {}
+type dog struct {}
 
-type Cat struct {}
+type cat struct {}
 
-func (d Dog) reply() string {
+func (d dog) reply() string {
 	return "wanwan"
 }
 
-func (c Cat) reply() string {
+func (c cat) reply() string {
 	return "nyaa"
 }
 
+func NewDog () Call {
+	return dog{}
+}
+
+func NewCat () Call {
+	return cat{}
+}
+
 func Run() {
-	d := Dog{}
+	d := NewDog()
 	fmt.Println(d.reply())
 
-	c := Cat{}
+	c := NewCat()
 	fmt.Println(c.reply())
 }

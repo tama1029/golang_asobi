@@ -16,5 +16,4 @@ func main() {
 	struct_sample.Run()
 	fmt.Println("---------- interface sample -----------")
 	interface_sample.Run()
-
 }
